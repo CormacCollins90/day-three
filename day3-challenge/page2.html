@@ -8,33 +8,52 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/11-style.css" type="text/css" />
     <title img=src "logo.png">India Spice Signature Dishes</title>
 </head>
 <style>
     body,
     html {
-        height: 100%;
+        height: 100vh
     }
+    
+    .hvr-pulse:before {
+    background: rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    }
+    
+     .hvr-wobble-bottom:before {
+    background: rgba(0, 0, 0, 0.2);
+   
+     }
 
     .bg {
 
-        background-image: url("https://d1iqctulejj45h.cloudfront.net/0032875.png");
+        background-image: url("http://www.indiaspicehouseep.com/img/logo.png");
 
 
 
-        height: 100%;
+        height: 80%;
+        
+        margin-top: 10px;
 
 
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
-        transition: 10s;
-
+        background-size: contain;
+        transition: 10s
+        
+       
     }
-
-    .bg:hover {
-        border-radius: 50%;
+    
+    .bg:hover{
+        transform:rotate(360deg);
     }
+    
+    
 
 
 
@@ -42,7 +61,8 @@
     .h1 {
         color: lemonchiffon;
         font-size: 24px;
-        font-family: 'Pacifico';
+        font-family: 'Exo 2', sans-serif;
+        letter-spacing: 2px;
 
 
     }
@@ -51,31 +71,45 @@
 
     .navbar {
         background: linear-gradient(to right, red, green);
-
+       
 
     }
 
     .navbar-brand {
-        font-family: 'Pacifico';
+        font-family: 'Exo 2', sans-serif;
+        font-size: 20px;
+        letter-spacing: 2px;
     }
 
     nav ul li a {
         color: orange;
-        font-family: 'Pacifico';
+        font-family: 'Exo 2', sans-serif;
     }
 
     nav ul li a:hover {
         color: red;
+        text-decoration: none;
     }
 
     nav>a {
         color: orange;
+        
 
     }
 
     nav>a:hover {
         color: green;
+        text-decoration: none;
     }
+    
+    .menuitem {
+    width: 15%;
+    padding-top: 5px;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
 </style>
 
 <body>
