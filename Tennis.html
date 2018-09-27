@@ -9,97 +9,14 @@
 
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/06-style.css">
+    <link rel="stylesheet" href="tennis.css">
     <title>Monkstown Tennis Club</title>
 </head>
-<style>
-    body,
-    html {
-        height: 100%;
-    }
-
-    .bg {
-
-        background-image: url("http://www.monkstowntennisclub.com/pics/General/openweek1.png");
-
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .h1 {
-        color: lemonchiffon;
-        font-size: 28px;
-        font-family: 'Yanone Kaffeesatz', sans-serif;
-    }
-
-
-
-    /*.navbar {}*/
-
-    .navbar-brand {
-        font-family: 'Pacifico';
-    }
-
-    .h1:hover {
-        color: white;
-        text-decoration: none;
-
-    }
-
-    nav ul li a {
-        color: lemonchiffon;
-        font-family: 'Yanone Kaffeesatz', sans-serif;
-        font-size: 26px;
-    }
-
-    nav ul li a:hover {
-        color: black;
-    }
-
-    nav>a {
-        color: lemonchiffon;
-    }
-
-    nav>a:hover {
-        color: black;
-    }
-
-    .ball {
-        animation: movingball 5s infinite;
-        border-radius: 100%;
-        /*height: 100px;*/
-        left: 35%;
-        /*padding-top: 20px;*/
-        /*position: relative;*/
-        top: 0%;
-        width: 50px;
-        display: inline-block;
-    }
-
-    @keyframes movingball {
-        0% {
-            top: 80%;
-            transform: rotate(360deg);
-        }
-
-    }
-
-    .navbar-toggler {
-        padding: .25rem .75rem;
-        font-size: 1.25rem;
-        line-height: .5;
-        background-color: forestgreen;
-         border: 1px solid transparent; 
-        border-radius: .25rem;
-    }
-</style>
 
 <body class="bg">
 
     <nav class="navbar navbar-expand-md ">
-        <img class="ball" src="/day3-challenge/media/tennis.png" width="25">
+        <img class="ball" src="day3-challenge/media/tennis.png" width="25">
         <a class="navbar-brand" href="#">Monkstown lawn and tennis club</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
@@ -135,6 +52,11 @@
             </div>
         </div>
     </div>
+    <div class="weather">
+     <div id="weatherData"></div>
+      <div id="Temp"></div>
+      </div>
+    <script src="tennis.js"></script>
     
     
 
