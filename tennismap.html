@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        /* Set the size of the div element that contains the map */
 
+        #map {
+            /*position: absolute;*/
+            /*margin-top: 100px;*/
+            height: 400px;
+            /* The height is 400 pixels */
+            width: 100;
+            /* The width is the width of the web page */
+        }
+    </style>
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
     <link rel="stylesheet" href="tennis.css">
@@ -14,7 +25,6 @@
 </head>
 
 <body class="bg">
-
     <nav class="navbar navbar-expand-md ">
         <img class="ball" src="day3-challenge/media/tennis.png" width="25">
         <a class="navbar-brand" href="#">Monkstown lawn Tennis and Croquet club</a>
@@ -35,38 +45,22 @@
             </ul>
         </div>
     </nav>
-
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-sm-2 col-sm-6">
-                <h1></h1>
-                <a class="h1" href="https://www.telegraph.co.uk/tennis/2018/09/09/novak-djokovic-vs-juan-martin-del-potro-us-open-2018-final-live/" target="_blank">World tennis news</a>
-
-            </div>
-            <div class="col-sm-6 col-sm-6">
-                <h1></h1>
-                <a class="h1" href="http://www.monkstowntennisclub.com/photos-open-2018.php" target="_blank">Open week 2018 Gallery</a>
-
-            </div>
-        </div>
-    </div>
-    <div class="weather">
-        <!--<form id="cityForm">-->
-        <!--    <input name="city" type="text" />-->
-        <!--</form>-->
-        <!--<button id="submit" onclick="submitCity()">Hourly Forecast</button>-->
-        <div id="weatherData"></div>
-        <div id="Temp"></div>
-    </div>
-    <script src="tennis.js"></script>
-
-
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            var uluru = { lat: 51.847507, lng: -8.335810 };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), { zoom: 16, center: uluru });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({ position: uluru, map: map });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKjroCKg6SHV4r2TYtghEabvtiGMZxvHc&callback=initMap">
+    </script>
 </body>
 
 </html>
